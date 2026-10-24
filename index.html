@@ -43,11 +43,6 @@
         .gallery-image {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .gallery-image:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 25px rgba(211, 17, 24, 0.3);
-            z-index: 10;
-        }
         .video-card:hover .play-btn {
             color: #D31118;
             transform: scale(1.1) translate(-50%, -50%);
@@ -74,6 +69,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="text-gray-300 hover:text-brand-red font-semibold transition-colors uppercase tracking-wider text-sm">Home</a>
                     <a href="#programs" class="text-gray-300 hover:text-brand-red font-semibold transition-colors uppercase tracking-wider text-sm">Programs</a>
+                    <a href="#discover" class="text-gray-300 hover:text-brand-red font-semibold transition-colors uppercase tracking-wider text-sm">Discover</a>
                     <a href="#gallery" class="text-gray-300 hover:text-brand-red font-semibold transition-colors uppercase tracking-wider text-sm">Gallery</a>
                     <a href="#videos" class="text-gray-300 hover:text-brand-red font-semibold transition-colors uppercase tracking-wider text-sm">Videos</a>
                     <a href="#contact" class="px-5 py-2 bg-brand-red text-white font-bold rounded shadow-lg hover:bg-red-700 transition-all uppercase text-sm">Join Today</a>
@@ -86,11 +82,12 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu (Hidden by default) -->
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-gray border-t border-gray-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
                 <a href="#home" class="block px-3 py-2 text-white font-semibold uppercase hover:bg-brand-red">Home</a>
                 <a href="#programs" class="block px-3 py-2 text-white font-semibold uppercase hover:bg-brand-red">Programs</a>
+                <a href="#discover" class="block px-3 py-2 text-white font-semibold uppercase hover:bg-brand-red">Discover</a>
                 <a href="#gallery" class="block px-3 py-2 text-white font-semibold uppercase hover:bg-brand-red">Gallery</a>
                 <a href="#videos" class="block px-3 py-2 text-white font-semibold uppercase hover:bg-brand-red">Videos</a>
                 <a href="#contact" class="block px-3 py-2 mt-2 bg-brand-red text-white font-bold uppercase rounded">Join Today</a>
@@ -100,7 +97,6 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-brand-black min-h-[90vh] flex items-center">
-        <!-- Using image4.jpeg as the main hero banner image -->
         <div class="absolute inset-0 z-0">
             <img src="image4.jpeg" alt="Admissions Open Hero Banner" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover opacity-50 pointer-events-none select-none">
             <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent z-10 pointer-events-none"></div>
@@ -129,7 +125,6 @@
     <!-- About & Programs -->
     <section id="programs" class="py-20 bg-brand-gray border-y border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-red uppercase mb-4">Our Programs & Legacy</h2>
                 <div class="w-24 h-1 bg-brand-red mx-auto"></div>
@@ -139,21 +134,21 @@
                 <!-- Using image1, image2, image3 -->
                 <div class="space-y-4 bg-brand-black p-4 rounded-xl border border-gray-700">
                     <div class="relative group overflow-hidden rounded-lg shadow-xl w-full">
-                        <img src="image1.jpeg" alt="Free Training for Girls" oncontextmenu="return false;" draggable="false" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 pointer-events-none select-none">
+                        <img src="image1.jpeg" alt="Free Training for Girls" oncontextmenu="return false;" draggable="false" class="w-full h-auto object-cover pointer-events-none select-none">
                     </div>
                     <h3 class="text-xl font-bold text-brand-red uppercase text-center mt-4">Free Training For Girls</h3>
                     <p class="text-gray-400 text-sm text-center">Empowering young girls with essential self-defense skills, building physical and mental resilience completely free of cost.</p>
                 </div>
                 <div class="space-y-4 bg-brand-black p-4 rounded-xl border border-gray-700">
                     <div class="relative group overflow-hidden rounded-lg shadow-xl w-full">
-                        <img src="image3.jpeg" alt="Training Program" oncontextmenu="return false;" draggable="false" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 pointer-events-none select-none">
+                        <img src="image3.jpeg" alt="Training Program" oncontextmenu="return false;" draggable="false" class="w-full h-auto object-cover pointer-events-none select-none">
                     </div>
                     <h3 class="text-xl font-bold text-brand-red uppercase text-center mt-4">Confidence & Strength</h3>
                     <p class="text-gray-400 text-sm text-center">Expert guidance by Grand Master Radhey Shyam Gautam to help you master traditional Taekwondo and boost your confidence.</p>
                 </div>
                 <div class="space-y-4 bg-brand-black p-4 rounded-xl border border-gray-700">
                     <div class="relative group overflow-hidden rounded-lg shadow-xl w-full">
-                        <img src="image2.jpeg" alt="Academy Advantages" oncontextmenu="return false;" draggable="false" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 pointer-events-none select-none">
+                        <img src="image2.jpeg" alt="Academy Advantages" oncontextmenu="return false;" draggable="false" class="w-full h-auto object-cover pointer-events-none select-none">
                     </div>
                     <h3 class="text-xl font-bold text-brand-red uppercase text-center mt-4">Taekwondo & Yoga</h3>
                     <p class="text-gray-400 text-sm text-center">A holistic approach combining the martial art of Taekwondo with the mental and physical benefits of Yoga for all age groups.</p>
@@ -162,14 +157,47 @@
 
             <div class="text-center">
                 <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
-                    Under the expert guidance of <strong>Grand Master Radhey Shyam Gautam</strong> (Certified Taekwondo Coach, National Referee & Paralympic Player), Red Dragon Taekwondo Academy is dedicated to fostering physical and mental strength. Join our classes today to start your journey!
+                    Under the expert guidance of <strong>Grand Master Radhey Shyam Gautam</strong>, Red Dragon Taekwondo Academy is dedicated to fostering physical and mental strength.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Discover Taekwondo / Resources -->
+    <section id="discover" class="py-20 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-red uppercase mb-4">Discover Taekwondo</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">Explore the principles, rules, history, and incredible benefits that make Taekwondo a way of life.</p>
+            </div>
+
+            <!-- Fix: Properly closed Grid Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-xl overflow-hidden bg-brand-gray border border-gray-800 p-2 flex justify-center items-center h-full">
+                    <img src="image31.jpeg" alt="Belt Test Rules" oncontextmenu="return false;" draggable="false" class="max-w-full max-h-[500px] object-contain pointer-events-none select-none">
+                </div>
+                <div class="rounded-xl overflow-hidden bg-brand-gray border border-gray-800 p-2 flex justify-center items-center h-full">
+                    <img src="image32.jpeg" alt="Benefits of Taekwondo" oncontextmenu="return false;" draggable="false" class="max-w-full max-h-[500px] object-contain pointer-events-none select-none">
+                </div>
+                <div class="rounded-xl overflow-hidden bg-brand-gray border border-gray-800 p-2 flex justify-center items-center h-full">
+                    <img src="image33.jpeg" alt="Why Children Practice Taekwondo" oncontextmenu="return false;" draggable="false" class="max-w-full max-h-[500px] object-contain pointer-events-none select-none">
+                </div>
+                <div class="rounded-xl overflow-hidden bg-brand-gray border border-gray-800 p-2 flex justify-center items-center h-full">
+                    <img src="image34.jpeg" alt="Taekwondo Teaches Life" oncontextmenu="return false;" draggable="false" class="max-w-full max-h-[500px] object-contain pointer-events-none select-none">
+                </div>
+                <div class="rounded-xl overflow-hidden bg-brand-gray border border-gray-800 p-2 flex justify-center items-center h-full">
+                    <img src="image35.jpeg" alt="The Beginnings of Taekwondo" oncontextmenu="return false;" draggable="false" class="max-w-full max-h-[500px] object-contain pointer-events-none select-none">
+                </div>
+                <div class="rounded-xl overflow-hidden bg-brand-gray border border-gray-800 p-2 flex justify-center items-center h-full">
+                    <img src="image36.jpeg" alt="Taekwondo Hindi Info" oncontextmenu="return false;" draggable="false" class="max-w-full max-h-[500px] object-contain pointer-events-none select-none">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Image Gallery -->
-    <section id="gallery" class="py-20 bg-brand-black">
+    <section id="gallery" class="py-20 bg-brand-gray border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-red uppercase mb-4">Academy Gallery</h2>
@@ -179,27 +207,27 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Using image6 to image10 -->
-                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80">
-                    <img src="image6.jpeg" alt="Belt Ceremony 1" oncontextmenu="return false;" draggable="false" class="gallery-image w-full h-full object-cover pointer-events-none select-none">
+                <div class="overflow-hidden rounded-lg bg-black relative h-80">
+                    <img src="image6.jpeg" alt="Belt Ceremony 1" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover pointer-events-none select-none">
                 </div>
-                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80">
-                    <img src="image7.jpeg" alt="Belt Ceremony 2" oncontextmenu="return false;" draggable="false" class="gallery-image w-full h-full object-cover pointer-events-none select-none">
+                <div class="overflow-hidden rounded-lg bg-black relative h-80">
+                    <img src="image7.jpeg" alt="Belt Ceremony 2" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover pointer-events-none select-none">
                 </div>
-                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80">
-                    <img src="image8.jpeg" alt="Belt Ceremony 3" oncontextmenu="return false;" draggable="false" class="gallery-image w-full h-full object-cover pointer-events-none select-none">
+                <div class="overflow-hidden rounded-lg bg-black relative h-80">
+                    <img src="image8.jpeg" alt="Belt Ceremony 3" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover pointer-events-none select-none">
                 </div>
-                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80">
-                    <img src="image9.jpeg" alt="Team Photo" oncontextmenu="return false;" draggable="false" class="gallery-image w-full h-full object-cover pointer-events-none select-none">
+                <div class="overflow-hidden rounded-lg bg-black relative h-80">
+                    <img src="image9.jpeg" alt="Team Photo" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover pointer-events-none select-none">
                 </div>
-                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80 lg:col-span-2">
-                    <img src="image10.jpeg" alt="Certificate Distribution" oncontextmenu="return false;" draggable="false" class="gallery-image w-full h-full object-cover pointer-events-none select-none">
+                <div class="overflow-hidden rounded-lg bg-black relative h-80 lg:col-span-2">
+                    <img src="image10.jpeg" alt="Certificate Distribution" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover pointer-events-none select-none">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Videos Section (YouTube Thumbnails) -->
-    <section id="videos" class="py-20 bg-brand-gray border-t border-gray-800">
+    <!-- Videos Section -->
+    <section id="videos" class="py-20 bg-brand-black border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-red uppercase mb-4">Official YouTube Channel</h2>
@@ -208,15 +236,28 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Video 1: Embedded Iframe -->
-                <div class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-black aspect-video">
-                    <iframe src="https://www.youtube.com/embed/KJ-aCzpd3g4" title="Red Dragon Taekwondo Academy Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="absolute inset-0 w-full h-full z-20"></iframe>
-                </div>
+                <!-- Video 1 https://www.youtube.com/watch?v=VmombaUHmjc-->
+                <!-- <div class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-black aspect-video">
+                    <img src="https://www.youtube.com/watch?v=VmombaUHmjc" title="Red Dragon Taekwondo Academy Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="absolute inset-0 w-full h-full z-20"></iframe>
+                </div> -->
 
-                <!-- Video 2: Placeholder linking to channel -->
-                <a href="https://www.youtube.com/@tkd_rsg_786" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-black aspect-video">
+                <!-- Video 1 -->
+                <a href="https://www.youtube.com/watch?v=VmombaUHmjc" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-gray aspect-video">
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-900 pointer-events-none">
-                        <img src="logo.png" alt="Channel Logo Placeholder" oncontextmenu="return false;" draggable="false" class="h-40 w-40 opacity-20 object-contain select-none">
+                        <img src="image11.jpeg" alt="Channel Logo Placeholder" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-300 select-none">
+                    </div>
+                    <i class="play-btn fab fa-youtube absolute top-1/2 left-1/2 text-5xl text-white z-10 drop-shadow-lg pointer-events-none"></i>
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 z-20 pointer-events-none">
+                        <h3 class="text-white font-bold truncate">Red Dragon Taekwondo Academy Video</h3>
+                        <p class="text-brand-red text-sm font-semibold mt-1">Watch on YouTube</p>
+                    </div>
+                </a>
+
+
+                <!-- Video 2 -->
+                <a href="https://www.youtube.com/@tkd_rsg_786" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-gray aspect-video">
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 pointer-events-none">
+                        <img src="image12.jpeg" alt="Channel Logo Placeholder" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-300 select-none">
                     </div>
                     <i class="play-btn fab fa-youtube absolute top-1/2 left-1/2 text-5xl text-white z-10 drop-shadow-lg pointer-events-none"></i>
                     <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 z-20 pointer-events-none">
@@ -225,14 +266,51 @@
                     </div>
                 </a>
 
-                <!-- Video 3: Placeholder linking to channel -->
-                <a href="https://www.youtube.com/@tkd_rsg_786" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-black aspect-video">
+                <!-- Video 3 -->
+                <a href="https://www.youtube.com/@tkd_rsg_786" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-gray aspect-video">
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-900 pointer-events-none">
                         <img src="image1.jpeg" alt="Channel Placeholder" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-300 select-none">
                     </div>
                     <i class="play-btn fab fa-youtube absolute top-1/2 left-1/2 text-5xl text-white z-10 drop-shadow-lg pointer-events-none"></i>
                     <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 z-20 pointer-events-none">
                         <h3 class="text-white font-bold truncate">Self Defense Tutorials & Highlights</h3>
+                        <p class="text-brand-red text-sm font-semibold mt-1">Watch on YouTube</p>
+                    </div>
+                </a>
+
+                <!-- Video 4 -->
+                <a href="https://www.youtube.com/watch?v=0-YH1nT97FQ" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-gray aspect-video">
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 pointer-events-none">
+                        <img src="image13.jpeg" alt="Channel Logo Placeholder" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-300 select-none">
+                    </div>
+                    <i class="play-btn fab fa-youtube absolute top-1/2 left-1/2 text-5xl text-white z-10 drop-shadow-lg pointer-events-none"></i>
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 z-20 pointer-events-none">
+                        <h3 class="text-white font-bold truncate">ASISC UP & UK 2022 Taekwondo Championship</h3>
+                        <p class="text-brand-red text-sm font-semibold mt-1">Watch on YouTube</p>
+                    </div>
+                </a>
+
+
+                <!-- Video 5 -->
+                <a href="https://www.youtube.com/watch?v=xn29lqUNaY8" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-gray aspect-video">
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 pointer-events-none">
+                        <img src="image14.jpeg" alt="Channel Logo Placeholder" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-300 select-none">
+                    </div>
+                    <i class="play-btn fab fa-youtube absolute top-1/2 left-1/2 text-5xl text-white z-10 drop-shadow-lg pointer-events-none"></i>
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 z-20 pointer-events-none">
+                        <h3 class="text-white font-bold truncate">Taekwondo demonstration in Siddhant World School</h3>
+                        <p class="text-brand-red text-sm font-semibold mt-1">Watch on YouTube</p>
+                    </div>
+                </a>
+
+                <!-- Video 6 -->
+                <a href="https://www.youtube.com/watch?v=mYnwipV8Zv0" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-gray aspect-video">
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900 pointer-events-none">
+                        <img src="image15.jpeg" alt="Channel Placeholder" oncontextmenu="return false;" draggable="false" class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-300 select-none">
+                    </div>
+                    <i class="play-btn fab fa-youtube absolute top-1/2 left-1/2 text-5xl text-white z-10 drop-shadow-lg pointer-events-none"></i>
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 z-20 pointer-events-none">
+                        <h3 class="text-white font-bold truncate">Taekwondo Championship in Mount Carmel Girls College</h3>
                         <p class="text-brand-red text-sm font-semibold mt-1">Watch on YouTube</p>
                     </div>
                 </a>
@@ -249,9 +327,8 @@
     </section>
 
     <!-- Footer & Contact -->
-    <footer id="contact" class="bg-brand-black border-t-4 border-brand-red pt-16 pb-8 relative overflow-hidden">
-        <!-- Dragon background silhouette -->
-        <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none w-1/2 h-full bg-[url('logo.png')] bg-no-repeat bg-right-bottom bg-contain" style="background-image: url('logo.png');"></div>
+    <footer id="contact" class="bg-brand-gray border-t-4 border-brand-red pt-16 pb-8 relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none w-1/2 h-full bg-[url('logo.png')] bg-no-repeat bg-right-bottom bg-contain"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -276,6 +353,7 @@
                     <ul class="space-y-3">
                         <li><a href="#home" class="text-gray-400 hover:text-brand-red transition-colors"><i class="fas fa-chevron-right text-xs mr-2 text-brand-red"></i> Home</a></li>
                         <li><a href="#programs" class="text-gray-400 hover:text-brand-red transition-colors"><i class="fas fa-chevron-right text-xs mr-2 text-brand-red"></i> Programs</a></li>
+                        <li><a href="#discover" class="text-gray-400 hover:text-brand-red transition-colors"><i class="fas fa-chevron-right text-xs mr-2 text-brand-red"></i> Discover Taekwondo</a></li>
                         <li><a href="#gallery" class="text-gray-400 hover:text-brand-red transition-colors"><i class="fas fa-chevron-right text-xs mr-2 text-brand-red"></i> Gallery</a></li>
                         <li><a href="#videos" class="text-gray-400 hover:text-brand-red transition-colors"><i class="fas fa-chevron-right text-xs mr-2 text-brand-red"></i> Videos</a></li>
                     </ul>
@@ -322,7 +400,6 @@
             menu.classList.toggle('hidden');
         });
 
-        // Close mobile menu on click of a link
         const mobileLinks = menu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
