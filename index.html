@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Dragon Taekwondo Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#D31118',
+                            dark: '#111111',
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            gray: '#222222'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Oswald', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%);
+        }
+        .gallery-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(211, 17, 24, 0.3);
+            z-index: 10;
+        }
+        .video-card:hover .play-btn {
+            color: #D31118;
+            transform: scale(1.1) translate(-50%, -50%);
+        }
+        .play-btn {
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body class="font-body bg-brand-dark text-brand-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-brand-black border-b border-brand-red/30 shadow-lg backdrop-blur-sm bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <img src="logo.png" alt="Red Dragon Logo" class="h-16 w-16 object-contain bg-white rounded-full p-1">
+                    <span class="font-heading font-bold text-xl md:text-2xl text-white tracking-wide uppercase">
+                        Red Dragon <span class="text-brand-red">Taekwondo</span>
+                    </span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-brand-red font-semibold transition-colors uppercase tracking-wider text-sm">Home</a>
+                    <a href="#programs" class="text-gray-300 hover:text-brand-red font-semibold transition-colors uppercase tracking-wider text-sm">Programs</a>
+                    <a href="#gallery" class="text-gray-300 hover:text-brand-red font-semibold transition-colors uppercase tracking-wider text-sm">Gallery</a>
+                    <a href="#videos" class="text-gray-300 hover:text-brand-red font-semibold transition-colors uppercase tracking-wider text-sm">Videos</a>
+                    <a href="#contact" class="px-5 py-2 bg-brand-red text-white font-bold rounded shadow-lg hover:bg-red-700 transition-all uppercase text-sm">Join Today</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-gray border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home" class="block px-3 py-2 text-white font-semibold uppercase hover:bg-brand-red">Home</a>
+                <a href="#programs" class="block px-3 py-2 text-white font-semibold uppercase hover:bg-brand-red">Programs</a>
+                <a href="#gallery" class="block px-3 py-2 text-white font-semibold uppercase hover:bg-brand-red">Gallery</a>
+                <a href="#videos" class="block px-3 py-2 text-white font-semibold uppercase hover:bg-brand-red">Videos</a>
+                <a href="#contact" class="block px-3 py-2 mt-2 bg-brand-red text-white font-bold uppercase rounded">Join Today</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-brand-black min-h-[90vh] flex items-center">
+        <!-- Using image4.jpeg as the main hero banner image -->
+        <div class="absolute inset-0 z-0">
+            <img src="image4.jpeg" alt="Admissions Open Hero Banner" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent z-10"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-2/3 text-center md:text-left pt-10">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-bold text-white leading-tight uppercase mb-4 shadow-sm">
+                    Building Champions <br/> <span class="text-brand-red">For Life</span>
+                </h1>
+                <p class="mt-4 text-xl text-gray-300 font-light mb-8 max-w-lg mx-auto md:mx-0">
+                    Strength • Discipline • Respect • Confidence. Learn traditional and modern Taekwondo from certified instructors.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="px-8 py-4 bg-brand-red text-white font-bold rounded shadow-[0_0_15px_rgba(211,17,24,0.5)] hover:bg-red-700 transition-all uppercase text-lg inline-block">
+                        Start Your Journey
+                    </a>
+                    <a href="#programs" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded hover:bg-white hover:text-brand-black transition-all uppercase text-lg inline-block">
+                        View Programs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Programs -->
+    <section id="programs" class="py-20 bg-brand-gray border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-red uppercase mb-4">Our Programs & Legacy</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-16">
+                <!-- Using image1, image2, image3 -->
+                <div class="space-y-4 bg-brand-black p-4 rounded-xl border border-gray-700">
+                    <img src="image1.jpeg" alt="Free Training for Girls" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    <h3 class="text-xl font-bold text-brand-red uppercase text-center mt-4">Free Training For Girls</h3>
+                    <p class="text-gray-400 text-sm text-center">Empowering young girls with essential self-defense skills, building physical and mental resilience completely free of cost.</p>
+                </div>
+                <div class="space-y-4 bg-brand-black p-4 rounded-xl border border-gray-700">
+                    <img src="image3.jpeg" alt="Training Program" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    <h3 class="text-xl font-bold text-brand-red uppercase text-center mt-4">Confidence & Strength</h3>
+                    <p class="text-gray-400 text-sm text-center">Expert guidance by Grand Master Radhey Shyam Gautam to help you master traditional Taekwondo and boost your confidence.</p>
+                </div>
+                <div class="space-y-4 bg-brand-black p-4 rounded-xl border border-gray-700">
+                    <img src="image2.jpeg" alt="Academy Advantages" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    <h3 class="text-xl font-bold text-brand-red uppercase text-center mt-4">Taekwondo & Yoga</h3>
+                    <p class="text-gray-400 text-sm text-center">A holistic approach combining the martial art of Taekwondo with the mental and physical benefits of Yoga for all age groups.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
+                    Under the expert guidance of <strong>Grand Master Radhey Shyam Gautam</strong> (Certified Taekwondo Coach, National Referee & Paralympic Player), Red Dragon Taekwondo Academy is dedicated to fostering physical and mental strength. Join our classes today to start your journey!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery" class="py-20 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-red uppercase mb-4">Academy Gallery</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">Glimpses of our training sessions, belt ceremonies, and the vibrant Dragon Family.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Using image6 to image10 -->
+                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80">
+                    <img src="image6.jpeg" alt="Belt Ceremony 1" class="gallery-image w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80">
+                    <img src="image7.jpeg" alt="Belt Ceremony 2" class="gallery-image w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80">
+                    <img src="image8.jpeg" alt="Belt Ceremony 3" class="gallery-image w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80">
+                    <img src="image9.jpeg" alt="Team Photo" class="gallery-image w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-lg bg-brand-gray relative group h-80 lg:col-span-2">
+                    <img src="image10.jpeg" alt="Certificate Distribution" class="gallery-image w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section (YouTube Thumbnails) -->
+    <section id="videos" class="py-20 bg-brand-gray border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-brand-red uppercase mb-4">Official YouTube Channel</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">Watch our students in action, learn techniques, and stay updated with Grand Master R.S. Gautam.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1: Embedded Iframe -->
+                <div class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-black aspect-video">
+                    <iframe src="https://www.youtube.com/embed/KJ-aCzpd3g4" title="Red Dragon Taekwondo Academy Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="absolute inset-0 w-full h-full z-20"></iframe>
+                </div>
+
+                <!-- Video 2: Placeholder linking to channel -->
+                <a href="https://www.youtube.com/@tkd_rsg_786" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-black aspect-video">
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900">
+                        <img src="logo.png" alt="Channel Logo Placeholder" class="h-40 w-40 opacity-20 object-contain">
+                    </div>
+                    <i class="play-btn fab fa-youtube absolute top-1/2 left-1/2 text-5xl text-white z-10 drop-shadow-lg"></i>
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 z-20">
+                        <h3 class="text-white font-bold truncate">Explore More Videos</h3>
+                        <p class="text-brand-red text-sm font-semibold mt-1">Watch on YouTube</p>
+                    </div>
+                </a>
+
+                <!-- Video 3: Placeholder linking to channel -->
+                <a href="https://www.youtube.com/@tkd_rsg_786" target="_blank" class="video-card relative block group rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-brand-black aspect-video">
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900">
+                        <img src="image1.jpeg" alt="Channel Placeholder" class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-300">
+                    </div>
+                    <i class="play-btn fab fa-youtube absolute top-1/2 left-1/2 text-5xl text-white z-10 drop-shadow-lg"></i>
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4 z-20">
+                        <h3 class="text-white font-bold truncate">Self Defense Tutorials & Highlights</h3>
+                        <p class="text-brand-red text-sm font-semibold mt-1">Watch on YouTube</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Subscribe Button -->
+            <div class="text-center mt-12 flex justify-center">
+                 <a href="https://www.youtube.com/@tkd_rsg_786?sub_confirmation=1" target="_blank" class="px-8 py-4 bg-brand-red text-white font-bold rounded shadow-[0_0_20px_rgba(211,17,24,0.6)] hover:bg-red-700 hover:scale-105 transition-transform duration-300 uppercase text-lg inline-flex items-center gap-3">
+                    <i class="fab fa-youtube text-3xl"></i>
+                    Subscribe to Our Channel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="contact" class="bg-brand-black border-t-4 border-brand-red pt-16 pb-8 relative overflow-hidden">
+        <!-- Dragon background silhouette -->
+        <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none w-1/2 h-full bg-[url('logo.png')] bg-no-repeat bg-right-bottom bg-contain" style="background-image: url('logo.png');"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <!-- Brand Col -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="logo.png" alt="Logo" class="h-16 w-16 bg-white rounded-full p-1">
+                        <span class="font-heading font-bold text-xl text-white uppercase">Red Dragon</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering minds and strengthening bodies through the discipline of Taekwondo and Yoga. Join the Dragon family today.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brand-red transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brand-red transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brand-red transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-heading font-bold text-white uppercase mb-6 border-b-2 border-brand-red inline-block pb-1">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-brand-red transition-colors"><i class="fas fa-chevron-right text-xs mr-2 text-brand-red"></i> Home</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-brand-red transition-colors"><i class="fas fa-chevron-right text-xs mr-2 text-brand-red"></i> Programs</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-brand-red transition-colors"><i class="fas fa-chevron-right text-xs mr-2 text-brand-red"></i> Gallery</a></li>
+                        <li><a href="#videos" class="text-gray-400 hover:text-brand-red transition-colors"><i class="fas fa-chevron-right text-xs mr-2 text-brand-red"></i> Videos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-heading font-bold text-white uppercase mb-6 border-b-2 border-brand-red inline-block pb-1">Dojang (Training Centers)</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-brand-red mt-1 mr-3 text-lg w-5 text-center"></i>
+                            <span class="text-gray-400">Shakti Nagar, Indira Nagar,<br>Lucknow (U.P.)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-brand-red mr-3 text-lg w-5 text-center"></i>
+                            <span class="text-gray-400 font-bold tracking-wider">+91 9451786111</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-brand-red mr-3 text-lg w-5 text-center"></i>
+                            <span class="text-gray-400">rsg0604@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">
+                    &copy; 2026 Red Dragon Taekwondo Academy. All rights reserved. <br class="md:hidden">Affiliated to Taekwondo Federation of India, U.P. Taekwondo Association.
+                </p>
+                <div class="text-brand-red font-heading font-bold text-sm tracking-widest uppercase">
+                    Discipline Today • Champion Tomorrow
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click of a link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
